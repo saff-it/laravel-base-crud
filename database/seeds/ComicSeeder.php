@@ -118,7 +118,7 @@ class ComicSeeder extends Seeder
             ],
         ];
 
-        foreach ($comics as $train){
+        foreach ($comics as $comic){
             $newComic = new Comic();
             $newComic->title= $newComic['title'];
             $newComic->description= $newComic['description'];
