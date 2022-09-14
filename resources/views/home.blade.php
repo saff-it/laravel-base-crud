@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 
-        @foreach ($comics as $comic )
+        @foreach ($comics as $comic)
             <tr>
                 <th scope="row">{{$comic -> id}}</th>
                 <td>{{$comic -> title}}</td>
