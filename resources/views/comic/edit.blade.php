@@ -2,7 +2,7 @@
 
 @section('main-content')
 
-<form action="{{ route('comics.update')}}" method="POST" class="row g-3">
+<form action="{{ route('comics.update', $comic->id)}}" method="POST" class="row g-3">
     @csrf
     @method(PUT)
 

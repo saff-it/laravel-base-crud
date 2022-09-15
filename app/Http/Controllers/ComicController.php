@@ -73,7 +73,10 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::all();
+        return view('comic.edit', $comic);
+        
+        
     }
 
     /**
@@ -85,7 +88,7 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('comics.update');
     }
 
     /**

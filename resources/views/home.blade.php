@@ -24,8 +24,8 @@
                 <td>{{$comic -> price}}</td>
                 <td>{{$comic -> sale_date}}</td>
                 <td>{{$comic -> type}}</td>
-                <td><button>Edit</button></td>
-                <td><button>Delete</button></td>
+                <td><button> <a href="{{route('comics.edit', $comic->id)}}"> Edit</a></button></td>
+                
                 
             </tr>
 
