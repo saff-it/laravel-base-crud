@@ -24,7 +24,12 @@
                 <td>{{$comic -> price}}</td>
                 <td>{{$comic -> sale_date}}</td>
                 <td>{{$comic -> type}}</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>
+                
             </tr>
+
+            
         @endforeach
       
       
