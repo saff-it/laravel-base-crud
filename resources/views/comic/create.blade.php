@@ -2,7 +2,9 @@
 
 @section('main-content')
 
-<form class="row g-3">
+<form action="{{ route('comic.store')}}" method="POST" class="row g-3">
+    @csrf
+    
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail4">

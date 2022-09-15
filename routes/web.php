@@ -18,7 +18,9 @@ Route::get('/', "HomeController@index")->name('homepage');
 Route::get('/comics', "ComicController@index")->name('comic.index');
 Route::get('/comics/{comic}', "ComicController@show")->name('comic.show');
 
+Route::get('/comics/{comic}', "ComicController@create")->name('comic.create');
 
 
-// Route::resource('/comic', "ComicController");
+
+Route::resource('/comic', "ComicController");
 
