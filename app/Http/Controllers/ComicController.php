@@ -49,6 +49,8 @@ class ComicController extends Controller
         $comic -> type = $dataInput['type']; 
 
         $comic -> save();
+
+        return redirect()->route('comics.show', compact('comic'));
     }
 
     /**

@@ -16,7 +16,7 @@
             <tr>
                 <th scope="row">{{$comic -> id}}</th>
                 <td>
-                    <a href="{{ route('comic.show', $comic -> id) }}">
+                    <a href="{{ route('comics.show', $comic -> id) }}">
                         {{$comic -> title}}
                     </a>
                     

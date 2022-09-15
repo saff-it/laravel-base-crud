@@ -12,7 +12,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('comic.create')}}">Form</a>
+            <a class="nav-link active" aria-current="page" href="{{route('comics.create')}}">Form</a>
           </li>
           
           </li>

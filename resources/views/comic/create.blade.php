@@ -2,7 +2,7 @@
 
 @section('main-content')
 
-<form action="{{ route('comic.store')}}" method="POST" class="row g-3">
+<form action="{{ route('comics.store')}}" method="POST" class="row g-3">
     @csrf
 
     <div class="col-md-6">
@@ -22,17 +22,17 @@
 
     <div class="col-12">
       <label for="input-price" class="form-label">Price</label>
-      <input type="text" class="form-control" id="price" name="price">
+      <input type="text" class="form-control" id="price" name="price" required>
     </div>
 
     <div class="col-12">
       <label for="input-series" class="form-label">Series</label>
-      <input type="text" class="form-control" id="series" name="series">
+      <input type="text" class="form-control" id="series" name="series" required>
     </div>
 
     <div class="col-12">
         <label for="input-sale-date" class="form-label">Sale date</label>
-        <input type="date" class="form-control" id="sale_date" name="sale_date">
+        <input type="date" class="form-control" id="sale_date" name="sale_date" required>
       </div>
 
     <div class="col-md-6">
