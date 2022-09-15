@@ -14,8 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        // $comic = Comic::all();
-        // return view('comic.index', compact('comic'));
+       
     }
 
     
@@ -38,7 +37,14 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dataInput = $request ->all();
+
+        $comic = new Comic();
+        $comic -> title = $dataInput['title']; 
+        $comic -> description = $dataInput['description']; 
+        $comic -> price = $dataInput['price']; 
+        $comic -> series = $dataInput['series']; 
+        $comic -> type = $dataInput['type']; 
     }
 
     /**
