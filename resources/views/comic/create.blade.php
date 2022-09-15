@@ -4,39 +4,34 @@
 
 <form action="{{ route('comic.store')}}" method="POST" class="row g-3">
     @csrf
-    
+
     <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <label for="input-title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title">
     </div>
 
     <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <label for="input-description" class="form-label">Description</label>
+      <textarea name="description" id="description" cols="30" rows="10"></textarea>
     </div>
 
     <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <label for="input-price" class="form-label">Price</label>
+      <input type="text" class="form-control" id="price" name="price">
     </div>
 
     <div class="col-12">
-      <label for="inputAddress2" class="form-label">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      <label for="input-series" class="form-label">Series</label>
+      <input type="text" class="form-control" id="series" name="series">
     </div>
 
     <div class="col-md-6">
-      <label for="inputCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+      <label for="input-type" class="form-label">Type</label>
+      <input type="text" class="form-control" id="type" name="type">
     </div>
     
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
 
