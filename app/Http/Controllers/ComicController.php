@@ -114,7 +114,8 @@ class ComicController extends Controller
     {
         $comic = Comic::findOrFail($id);
         $comic::destroy($id);
-        return redirect()->route('homepage', $comic->id);
+
+        return redirect()->route('homepage', $comic->id)->with('delete', $comic->title);
 
     }
 }

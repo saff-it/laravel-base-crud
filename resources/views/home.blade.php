@@ -1,7 +1,16 @@
 @extends('layouts.main')
 
 @section('main-content')
-<table class="table">
+
+<section>
+
+  @if ( session('delete'))
+  <div class="alert" role="alert">
+     {{ session('delete') }} è stato cancellato per sempre.
+  </div>   
+  @endif
+
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -29,23 +38,13 @@
                   <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button> Delete</button>
+                        <button type="submit">Delete</button>
                   </form>
-                </td>
-
-
-
-
-                
-                
-                
+                </td>             
+              
             </tr>
-
-            
         @endforeach
-      
-      
     </tbody>
   </table>
-
+</section>
 @endsection
