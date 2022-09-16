@@ -99,7 +99,7 @@ class ComicController extends Controller
 
         $comic -> save();
 
-        return redirect()->route('comics.index', $comic->id);
+        return redirect()->route('homepage', $comic->id);
     }
 
     /**
