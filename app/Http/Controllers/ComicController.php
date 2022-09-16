@@ -39,6 +39,20 @@ class ComicController extends Controller
     {
         $dataInput = $request ->all();
 
+        $dataToBeValidated = $request->validate(
+            [
+                'title' => 'required|min:2|max:200|',
+                'author' => 'required|min:2|max:80|',
+                'completion_date' => 'required|date|',
+                'type' => 'required',
+                'description' => 'required|min:2|max:500|',
+                'image_url' => 'required|min:2',
+            ],
+            [
+                'title.required' => 'Per favore aggiungi almeno un titolo dai'
+            ]
+        );
+
         $comic = new Comic();
         $comic -> title = $dataInput['title']; 
         $comic -> description = $dataInput['description']; 

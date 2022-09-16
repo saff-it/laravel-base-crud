@@ -1,8 +1,21 @@
 @extends('layouts.main')
 
 @section('main-content')
+<section>
 
-<form action="{{ route('comics.store')}}" method="POST" class="row g-3">
+  @if ($errors->any()){
+    <div class="alert">
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{$error}}</li>
+        @endforeach
+      </ul>
+    </div>
+  }
+    
+  @endif
+
+  <form action="{{ route('comics.store')}}" method="POST" class="row g-3">
     @csrf
 
     <div class="col-md-6">
@@ -44,5 +57,5 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </form>
-
+</section>
 @endsection
