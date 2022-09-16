@@ -88,16 +88,17 @@ class ComicController extends Controller
     {
         $dataInput = $request ->all();
 
-        $comic = Comic::findOrFail($id);
-        $comic -> title = $dataInput['title']; 
-        $comic -> description = $dataInput['description']; 
-        $comic -> thumb = $dataInput['thumb']; 
-        $comic -> price = $dataInput['price']; 
-        $comic -> series = $dataInput['series']; 
-        $comic-> sale_date = $dataInput['sale_date'];
-        $comic -> type = $dataInput['type']; 
+        // $comic = Comic::findOrFail($id);
+        // $comic -> title = $dataInput['title']; 
+        // $comic -> description = $dataInput['description']; 
+        // $comic -> thumb = $dataInput['thumb']; 
+        // $comic -> price = $dataInput['price']; 
+        // $comic -> series = $dataInput['series']; 
+        // $comic-> sale_date = $dataInput['sale_date'];
+        // $comic -> type = $dataInput['type']; 
 
-        $comic -> save();
+        // $comic -> save();
+        
 
         return redirect()->route('homepage', $comic->id);
     }
