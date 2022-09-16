@@ -4,7 +4,7 @@
 
 <form action="{{ route('comics.update', $comic->id)}}" method="POST" class="row g-3">
     @csrf
-    @method(PUT)
+    @method('PUT')
 
     <div class="col-md-6">
       <label for="input-title" class="form-label">Title</label>
