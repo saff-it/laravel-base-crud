@@ -51,12 +51,12 @@
 
 @section('footer-script')
   <script>
-    const deletedItems = document.querySelectorAll('delete-item');
+    const deletedItems = document.querySelectorAll('.delete-item');
     deletedItems.forEach(
-      element => {
-        element.addEventListener('submit', function(event){
+      deletedItem => {
+        deletedItem.addEventListener('submit', function(event){
           event.preventDefault();
-          const result = window.confirm("Vuoi davvero cancellare?");
+          const result = window.confirm('Vuoi davvero cancellare?');
           if (result) this.submit();
         })
     });
