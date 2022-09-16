@@ -98,8 +98,9 @@ class ComicController extends Controller
         // $comic -> type = $dataInput['type']; 
 
         // $comic -> save();
+        $comic = Comic::findOrFail($id);
+        $comic->update($dataInput);
         
-
         return redirect()->route('homepage', $comic->id);
     }
 
